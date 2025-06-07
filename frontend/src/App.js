@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { QRCode } from 'qrcode.react';
+import { QRCodeSVG } from 'qrcode.react';
 
 const API_BASE = 'https://mini-stack-ig9u.onrender.com';
 // Replace this with your deployed frontend URL
@@ -36,7 +36,7 @@ function App() {
       <h1>Mini To-Do App</h1>
       <div style={{ marginBottom: 24, textAlign: 'center' }}>
         <p>Scan to open this app anywhere:</p>
-        <QRCode value={FRONTEND_URL} size={160} />
+        <QRCodeSVG value={FRONTEND_URL} size={160} />
         <div style={{ fontSize: 12, marginTop: 8 }}>{FRONTEND_URL}</div>
       </div>
       <div style={{ display: 'flex', gap: 8 }}>
